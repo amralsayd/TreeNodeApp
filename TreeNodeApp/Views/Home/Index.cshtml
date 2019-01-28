@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="container">
+
+    
+
+        @model IEnumerable<TreeNodeApp.Models.TreeNode>
+
+        @if (Model != null && Model.Count() > 0)
+        {
+            foreach (var item in Model)
+            {
+                @Html.Partial("View", item);
+            }
+        }
+
+</div><!-- /.container -->
+
+
